@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "33abe95239aa26a5b50958ebd745aa7d0a9651e7a6392c361a5b7c30856f39fa"
+            "sha256": "a414b87d9cf9b96d84def4dacb9356e352d7c10856baab74074d957700d04ace"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -31,6 +31,14 @@
             ],
             "index": "pypi",
             "version": "==1.0.2"
+        },
+        "flask-cors": {
+            "hashes": [
+                "sha256:7ad56ee3b90d4955148fc25a2ecaa1124fc84298471e266a7fea59aeac4405a5",
+                "sha256:7e90bf225fdf163d11b84b59fb17594d0580a16b97ab4e1146b1fb2737c1cfec"
+            ],
+            "index": "pypi",
+            "version": "==3.0.7"
         },
         "flask-heroku": {
             "hashes": [
@@ -139,6 +147,13 @@
             ],
             "index": "pypi",
             "version": "==2.7.6.1"
+        },
+        "six": {
+            "hashes": [
+                "sha256:70e8a77beed4562e7f14fe23a786b54f6296e34344c23bc42f07b15018ff98e9",
+                "sha256:832dc0e10feb1aa2c68dcc57dbb658f1c7e65b9b61af69048abc87a2db00a0eb"
+            ],
+            "version": "==1.11.0"
         },
         "sqlalchemy": {
             "hashes": [
