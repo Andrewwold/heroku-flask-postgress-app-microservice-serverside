@@ -1,13 +1,13 @@
 from flask import Flask, render_template, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
-from secrets import postgres_uri
+from secrets import return_uri
 
 from flask_heroku import Heroku
 
 app = Flask(__name__)
 CORS(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = postgres_uri[data_key]
+app.config['SQLALCHEMY_DATABASE_URI'] = return_uri()
 heroku = Heroku(app)
 db = SQLAlchemy(app)
 
