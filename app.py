@@ -7,7 +7,8 @@ from flask_heroku import Heroku
 
 app = Flask(__name__)
 CORS(app)
-app.config['SQLALCHEMY_DATABASE_URI'] = return_uri()
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://smqxuzwltqacvh:2c0196e786c746bf0c8ce2636d1f2062a709554c22b29e788ce83d89143f524f@ec2-184-72-239-186.compute-1.amazonaws.com:5432/dbut9mmap3u2jt"
+
 heroku = Heroku(app)
 db = SQLAlchemy(app)
 
@@ -38,6 +39,17 @@ def collections():
 			db.session.commit()
 			return render_template('success.html')
 	return render_template('home.html')
+
+@app.route('/collections/api', methods=['POST'])
+def api_collections():
+	email = None
+	if not request.json or not 'email' in request.json:
+        abort(400)
+    email = request.json['email']
+	reg = User(email)
+	db.session.add(reg)
+	db.session.commit()
+
 
 @app.route('/return_emails', methods=['GET'])
 def return_emails():
