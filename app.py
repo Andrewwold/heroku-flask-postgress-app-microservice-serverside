@@ -44,8 +44,8 @@ def collections():
 def api_collections():
 	email = None
 	if not request.json or not 'email' in request.json:
-        abort(400)
-    email = request.json['email']
+		abort(400)
+	email = request.json['email']
 	reg = User(email)
 	db.session.add(reg)
 	db.session.commit()
