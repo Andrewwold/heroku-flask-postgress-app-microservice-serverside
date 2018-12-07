@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
-from secrets import return_uri
+# from secrets import return_uri
 
 from flask_heroku import Heroku
 
