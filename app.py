@@ -43,7 +43,7 @@ def collections():
 @app.route('/collections/api', methods=['POST'])
 def api_collections():
 	email = None
-	if not request.json or not 'email' in request.json:
+	if not request.json:
 		abort(400)
 	email = request.json['email']
 	reg = User(email)
