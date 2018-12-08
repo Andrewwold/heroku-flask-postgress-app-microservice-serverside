@@ -42,10 +42,12 @@ def collections():
 
 @app.route('/collections/api', methods=['POST'])
 def api_collections():
-	email = request.json['email']
-	reg = User(email)
-	db.session.add(reg)
-	db.session.commit()
+	if request.content_type == 'application/json':
+			post_data = request.get_json()
+			email = post_data.get('email')
+			reg = User(email)
+			db.session.add(reg)
+			db.session.commit()
 
 
 @app.route('/return_emails', methods=['GET'])
