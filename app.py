@@ -48,8 +48,7 @@ def api_collections():
 			reg = User(email)
 			db.session.add(reg)
 			db.session.commit()
-			resp = Response(js, status=200, mimetype='application/json')
-			return resp
+
 
 
 @app.route('/return_emails', methods=['GET'])
